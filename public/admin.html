@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin - Ekta Premier League</title>
+  <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+  <canvas id="particles"></canvas>
+  <header class="topbar">
+    <div class="brand">
+      <img src="/public/assets/logo.png" class="logo" alt="logo"/>
+      <div>
+        <h1>Admin Panel</h1>
+        <div class="subtitle">Organized By 🏏 D B Rathod | Created By V R Rathod</div>
+      </div>
+    </div>
+    <a class="admin" href="/public/index.html">Live</a>
+  </header>
+
+  <main class="admin-main">
+    <div class="card">
+      <h3>Teams</h3>
+      <form id="teamForm">
+        <input name="name" placeholder="Team Name" required/>
+        <input name="short" placeholder="Short Code"/>
+        <input type="file" name="logo" accept="image/*" />
+        <button type="submit">Add Team</button>
+      </form>
+      <div id="teamsList"></div>
+    </div>
+
+    <div class="card">
+      <h3>Players</h3>
+      <form id="playerForm">
+        <input name="name" placeholder="Player Name" required/>
+        <input name="role" placeholder="Role (Batsman/Bowler)"/>
+        <input name="jersey" placeholder="Jersey No"/>
+        <select name="teamId" id="teamSelect"></select>
+        <input type="file" name="photo" accept="image/*" />
+        <button type="submit">Add Player</button>
+      </form>
+      <div id="playersListAdmin"></div>
+    </div>
+
+    <div class="card">
+      <h3>Create Match</h3>
+      <select id="createTeamA"></select>
+      <select id="createTeamB"></select>
+      <input id="overs" placeholder="Overs" value="20"/>
+      <button onclick="createMatch()">Create Match</button>
+      <div id="matchResp"></div>
+    </div>
+
+    <div class="card">
+      <h3>Start Innings</h3>
+      <select id="batTeamSelect"><option value="teamA">Team A</option><option value="teamB">Team B</option></select>
+      <button onclick="startInnings()">Start Innings</button>
+    </div>
+
+    <div class="card">
+      <h3>Add Ball</h3>
+      <input id="bruns" placeholder="Runs"/>
+      <label><input type="checkbox" id="bwicket" /> Wicket</label>
+      <select id="bextra"><option value="">None</option><option value="wide">Wide</option><option value="no-ball">No-ball</option></select>
+      <button onclick="addBall()">Add Ball</button>
+      <div id="ballResp"></div>
+    </div>
+  </main>
+
+<script src="/public/admin.js"></script>
+</body>
+</html>

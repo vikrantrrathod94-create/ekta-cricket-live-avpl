@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ekta Premier League</title>
+  <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+  <canvas id="particles"></canvas>
+  <header class="topbar">
+    <div class="brand">
+      <img src="/public/assets/logo.png" class="logo" alt="logo"/>
+      <div>
+        <h1>EKTA Premier League</h1>
+        <div class="subtitle">Organized By 🏏 D B Rathod | Created By V R Rathod</div>
+      </div>
+    </div>
+    <a class="admin" href="/public/admin.html">Admin</a>
+  </header>
+
+  <main class="main">
+    <section class="scorebox">
+      <div class="teams" id="teams">No live match</div>
+      <div class="score" id="scoreline">-- / -- (0.0)</div>
+      <div class="info" id="info"></div>
+    </section>
+
+    <aside class="side">
+      <div class="card">
+        <h3>Last Balls</h3>
+        <ul id="ballsList"></ul>
+      </div>
+      <div class="card">
+        <h3>Players</h3>
+        <ul id="playersList"></ul>
+      </div>
+    </aside>
+  </main>
+
+<script src="/public/script.js"></script>
+</body>
+</html>
